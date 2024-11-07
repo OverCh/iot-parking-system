@@ -1,1 +1,1 @@
-# iot-parking-system
+cd path/to/iot-parking-system
