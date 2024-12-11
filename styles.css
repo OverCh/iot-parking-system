@@ -1,0 +1,143 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+
+#parking-status {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.parking-slot {
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #00e65c;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.parking-slot:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.parking-slot h3 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.status {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #3f327a;
+    transition: color 0.3s ease;
+}
+
+.status.vacant {
+    color: #5bc0de;
+}
+
+.status.full {
+    color: #d9534f;
+}
+
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+/* ปรับการแสดงผลบนอุปกรณ์ขนาดเล็ก */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .parking-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .parking-slot h3 {
+        font-size: 1.2em;
+    }
+
+    .status {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    .parking-slot {
+        padding: 15px;
+    }
+
+    .qr-code img {
+        width: 120px;
+        height: 120px;
+    }
+}
